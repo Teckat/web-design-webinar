@@ -1,5 +1,7 @@
 {
   "cSpell.words": [
     "teckat"
-  ]
+  ],
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true
 }
