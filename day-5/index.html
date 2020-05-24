@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+  <head>
+    <title>Web Design Webinar Day 05</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="description" content="web design webinar" />
+    <meta name="keywords" content="Teckat, teckat webinar series" />
+    <base href="/" />
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      header {
+        padding: 5px;
+      }
+
+      section {
+        padding: 32px;
+      }
+
+      .btn {
+        outline: none;
+        border: none;
+        border-radius: 30px;
+        width: 100px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        font-size: 14px;
+        cursor: default;
+        transition-property: all;
+        transition-delay: 100ms;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+        border: solid transparent 1px;
+      }
+
+      .btn:hover {
+        cursor: pointer;
+        background-color: cadetblue;
+      }
+
+      .btn:focus {
+        border-style: solid;
+        border-color: rgb(237, 100, 100);
+        border-width: 1px;
+      }
+
+      .btn.disabled {
+        background-color: #6994cc;
+        color: rgb(71, 255, 169);
+      }
+
+      .btn-primary {
+        background-color: blueviolet;
+        color: white;
+      }
+
+      .btn-danger {
+        background-color: red;
+        color: white;
+      }
+
+      .btn-danger:hover {
+        background-color: rgb(255, 0, 85);
+      }
+
+      .btn-success {
+        background-color: rgb(65, 209, 8);
+        color: #f6f6f6;
+      }
+
+      .btn-success:hover {
+        background-color: rgba(65, 209, 8, 0.746);
+      }
+
+      .btn-link {
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        width: unset;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 12px;
+      }
+
+      #code {
+        border-radius: 1rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a class="btn btn-primary btn-link" href="http://localhost:5500/day-4/about.html">About</a>
+      <a class="btn btn-primary btn-link" href="http://localhost:5500/day-4/contact.html" target="_blank">Contact</a>
+      <a href="mailto:support@teckat.com">Mail Me</a>
+      <a href="tel:+917788006653">Call Me</a>
+      <!-- navigation -->
+      <h2 class="text-center">Web Design Day 04</h2>
+    </header>
+    <!-- What we already cover -->
+    <!-- h1 to h6 -->
+    <!-- p, pre, blockquote, b, i, u, br, sub, sup  -->
+    <!-- div, span, table, section, header, footer, about, article, aside, main -->
+
+    <!-- Today i am going to cover -->
+    <!-- a, button, img, audio, video, form -->
+
+    <main>
+      <section>
+        <h4 class="text-center">Button</h4>
+
+        <button class="btn btn-primary" id="login" type="button" tabindex="1" onclick="login()">Login</button>
+        <br /> <br />
+
+        <button class="btn disabled" disabled>Forgot Password</button>
+        <br /> <br />
+
+        <button class="btn btn-danger" type="reset">reset</button>
+        <br /> <br />
+
+        <button class="btn btn-success" type="submit">submit</button>
+        <br /> <br />
+
+        <button class="btn" type="button" ondblclick="login()">button</button>
+        <br /> <br />
+
+        <button class="btn" type="menu">menu</button>
+      </section>
+
+      <section>
+        <h2>Images</h2>
+        <img src="/day-4/images/user.jpeg" height="150px" width="150px" alt="user">
+        <img id="code" src="/day-4/images/code.png" alt="cloud" style="width: 100%;">
+        <img src="https://teckat.com/images/home/welcome.webp" width="100%" alt="teckat">
+      </section>
+
+      <section>
+        <h2>Media</h2>
+
+        <!-- audio -->
+        <audio controls src="/day-5/audios/Morni Banke (Badhaai Ho)_320-(MrPaji.com).mp3">
+          Sorry, your browser doesn't support
+          <code>audio</code>
+        </audio>
+
+        <br /> <br />
+
+        <!-- video -->
+        <video src="day-5/videos/downtown.mp4" poster="day-5/images/cloud.png" controls>
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+      </section>
+
+
+      <section>
+        <h2>form</h2>
+        <form>
+          <label for="fullName">Full Name:</label>
+          <input type="text" name="fullName" id="fullName" placeholder="eg. sam deo" required> <br> <br>
+          <label for="age">Age:</label>
+          <input type="number" name="age" style="width: 250px;" id="age" placeholder="Enter your age" min="5" value="10"
+            step="5" max="100">
+          <br><br>
+          <label for="email">Email Address:</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email Address"> <br><br>
+          <label>Gender</label>
+          <input type="radio" name="gender" id="male"> <label for="male">Male</label>
+          <input type="radio" name="gender" id="female"> <label for="female">Female</label> <br><br>
+          <label for="notification">Notification:</label>
+          <input type="checkbox" name="notification" id="notification"> <label for="notification">Do you Want to
+            received notification ?</label> <br><br>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" value="123456" placeholder="Enter your password">
+          <br><br>
+          <input class="btn" type="reset" value="Reset Me">
+          <!-- <button class="btn" type="reset">reset me</button> -->
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p style="text-align: center;">By Teckat</p>
+    </footer>
+    <script>
+      function login() {
+        alert('Logged In')
+      }
+    </script>
+  </body>
+
+</html>
